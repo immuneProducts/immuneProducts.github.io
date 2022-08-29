@@ -8,6 +8,7 @@
 </head>
 
 <body>
+	<div class="_customer-preload"></div>
 	<section class="intro">
 		<header class="header" id="header">
 			<div class="header__logo">
@@ -303,6 +304,10 @@
 				}
 			});
 		});
+		window.addEventListener('load', ()=> {
+			const preload = document.querySelector('._customer-preload');
+			preload.style.display = 'none';
+		})
 	</script>
 </body>
 

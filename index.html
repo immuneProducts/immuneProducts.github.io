@@ -181,37 +181,37 @@
 		<div class="form__title">
 			Регистрация
 		</div>
-		<form id="form" action="./form.php" method="post">
+		<form id="form" action="./formnew.php" method="post">
 			<div class="form__wrapper">
 				<div class="form__left">
 					<div>
-						<input type="text" id="surname" placeholder="Фамилия" required />
-						<input type="text" id="name" placeholder="Имя" required />
-						<input type="text" id="patr" placeholder="Отчество" required />
-						<input type="text" id="dateBirth"
+						<input type="text" name="surname" id="surname" placeholder="Фамилия" required />
+						<input type="text" name="name" id="name" placeholder="Имя" />
+						<input type="text" name="patr" id="patr" placeholder="Отчество" />
+						<input type="text" name="dateBirth" id="dateBirth"
 							onfocus="(this.type='date'); (this.style.fontFamily='IBM Plex Mono, sans-serif')"
-							onblur="(this.type='text')" placeholder="Дата рождения" required />
+							onblur="(this.type='text')" placeholder="Дата рождения" />
 					</div>
 					<div>
-						<input type="text" id="city" placeholder="Город" required />
-						<input type="text" id="univer" placeholder="ВУЗ" required />
-						<input type="text" id="prof" placeholder="Профессия" required />
+						<input type="text" name="city" id="city" placeholder="Город" />
+						<input type="text" name="univer" id="univer" placeholder="ВУЗ" />
+						<input type="text" name="prof" id="prof" placeholder="Профессия" />
 					</div>
 					<div>
-						<input type="tel" id="tel" placeholder="Телефон" required />
-						<input type="email" id="email" placeholder="Почта" required />
+						<input type="tel" name="tel" id="tel" placeholder="Телефон" />
+						<input type="email" name="email" id="email" placeholder="Почта" />
 					</div>
 				</div>
 				<div class="form__right">
 					<div class="form__file">
-						<input type="file" id="imageUploads" accept=".png, .jpg, .jpeg" />
+						<input type="file" name="imageUploads[]" id="imageUploads" accept=".png, .jpg, .jpeg" />
 						<label for="imageUploads"><span>Здесь ты&nbsp;можешь загрузить своё фото в&nbsp;формате <span
 									class="form__under">JPEG</span>, <span class="form__under">PNG</span>
 								для&nbsp;бэйджика
 								в&nbsp;качестве участника или&nbsp;зрителя.</span></label>
 					</div>
 					<div class="form__file">
-						<input type="file" id="videoUploads" accept=".mp4, .pdf" multiple />
+						<input type="file" name="videoUploads" id="videoUploads" accept=".mp4, .pdf" multiple />
 						<label for="videoUploads"><span>Здесь ты&nbsp;можешь загрузить свою <span
 									class="form__under">видео-визитку</span> в&nbsp;формате <span
 									class="form__under">MP<span class="form__numb">4</span></span> и&nbsp;файл
@@ -221,10 +221,10 @@
 				</div>
 			</div>
 			<div class="agree-wrapper">
-				<input type="checkbox" id="agree" required />
+				<input type="checkbox" name="agree" id="agree" required />
 				<label for="agree">Согласие на обработку данных</label>
 			</div>
-			<button class="form__button" id="formButton" type="submit">Отправить</button>
+			<button class="form__button" name="formButton" id="formButton" type="submit">Отправить</button>
 		</form>
 	</section>
 

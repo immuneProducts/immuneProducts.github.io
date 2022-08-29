@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Главная</title>
+	<link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+	<section class="intro">
+		<header class="header" id="header">
+			<div class="header__logo">
+				<img src="./imgs/logo.svg" width="157" height="34" alt="" />
+			</div>
+			<ul class="header__menu">
+				<li>
+					<a href="/">Наш корень</a>
+				</li>
+				<li>
+					<a href="#form">Хочу к вам</a>
+				</li>
+				<li>
+					<a href="/">Наши успехи</a>
+				</li>
+				<li>
+					<a href="/">Участники</a>
+				</li>
+				<li>
+					<a href="#contact">Связь</a>
+				</li>
+			</ul>
+		</header>
+		<div class="intro__logo">
+			<img src="./imgs/logo.svg" alt="" />
+		</div>
+		<div class="intro__ul-container">
+			<div class="intro__ul-wrapper">
+				<ul class="intro__ul">
+					<li>прояви себя</li>
+					<li>поработай в команде</li>
+					<li>реализуй крутой проект</li>
+					<li>найди работу для себя</li>
+				</ul>
+				<a href="#form" class="intro__button-wrapper">
+					<div class="button">
+						Регистрация
+					</div>
+					<div class="arrow">
+						<img src="./imgs/arrow.svg" />
+					</div>
+				</a>
+			</div>
+		</div>
+	</section>
+	<section class="about">
+		<div class="about__container">
+			<div class="about__item">
+				<div class="about__title">
+					<span></span>
+					Для кого этот хакатон
+					<span></span>
+				</div>
+				<div class="about__text">
+					Для студентов творческих профессий всех&nbsp;направлений.
+				</div>
+			</div>
+			<div class="about__item">
+				<div class="about__title">
+					<span></span>
+					Наша цель
+					<span></span>
+				</div>
+				<div class="about__text">
+					Мы помогаем студентам в продвижении себя и работодателя.
+				</div>
+			</div>
+			<div class="about__item">
+				<div class="about__title">
+					<span></span>
+					Концепция
+					<span></span>
+				</div>
+				<div class="about__text">
+					Мы вместе создаём концепции для решения социальных проблем, которые продвигаем среди инвесторов.
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="place">
+		<div class="place__left">
+			<div class="place__address">
+				<div class="place__address-wrapper">
+					<div>Уральский центр развития дизайна</div>
+					<div class="place__address-street">ул.Горького <span>4</span>А</div>
+				</div>
+			</div>
+			<div class="place__cross">
+				<img src="./imgs/cross.svg" alt="" />
+			</div>
+		</div>
+		<div class="place__right">
+			<div class="place__time">
+				<img src="./imgs/time.svg" alt="" />
+			</div>
+			<div class="place__org">
+				<img class="place__waves" src="./imgs/waves.svg" alt="" />
+				<div class="place__org-text">
+					организатор
+				</div>
+				<img src="./imgs/logo-dalnovidno.svg" alt="" />
+			</div>
+		</div>
+	</section>
+
+	<section class="steps">
+		<div class="steps__title">
+			√ этапы хакатона
+		</div>
+		<ol class="steps__ol">
+			<li>
+				<div class="steps__ol-title">
+					Отборочный этап
+				</div>
+				<ul class="steps__ul">
+					<li><span>приём заявок</span></li>
+					<li>креативная <span>видео-визитка</span></li>
+					<li>отбор самых лучших</li>
+				</ul>
+			</li>
+			<li>
+				<div class="steps__ol-title">
+					Разделение на команды
+				</div>
+				<ul class="steps__ul">
+					<li>знакомство в telegram-канале</li>
+					<li>деление на команды</li>
+					<li>распределение обязанностей между участниками</li>
+				</ul>
+			</li>
+			<li>
+				<div class="steps__ol-title">
+					Конкурсный этап
+				</div>
+				<ul class="steps__ul">
+					<li>Выдача тем командам</li>
+					<li>На разработку дизайн-концепции и&nbsp;её&nbsp;презентацию даётся 2 дня</li>
+				</ul>
+			</li>
+			<li>
+				<div class="steps__ol-title">
+					Презентационный этап
+				</div>
+				<ul class="steps__ul">
+					<li>Защита командных проектов</li>
+					<li>Подведение итогов</li>
+					<li>Объявление победителей</li>
+				</ul>
+			</li>
+			<li>
+				<div class="steps__ol-title">
+					Что дальше?
+				</div>
+				<ul class="steps__text">
+					Следующий этап — это реализация проекта и публикация участников.
+				</ul>
+			</li>
+			<img class="steps__img" src="./imgs/steps-anim.gif" />
+		</ol>
+	</section>
+
+	<section class="join">
+		Присоединяйся
+	</section>
+
+	<section class="form" id="form">
+		<div class="form__title">
+			Регистрация
+		</div>
+		<div class="form__wrapper">
+			<div class="form__left">
+				<div>
+					<input type="text" id="surname" placeholder="Фамилия" />
+					<input type="text" id="name" placeholder="Имя" />
+					<input type="text" id="patr" placeholder="Отчество" />
+					<input type="text" id="dateBirth"
+						onfocus="(this.type='date'); (this.style.fontFamily='IBM Plex Mono, sans-serif')"
+						onblur="(this.type='text')" placeholder="Дата рождения" />
+				</div>
+				<div>
+					<input type="text" id="city" placeholder="Город" />
+					<input type="text" id="univer" placeholder="ВУЗ" />
+					<input type="text" id="prof" placeholder="Профессия" />
+				</div>
+				<div>
+					<input type="tel" id="tel" placeholder="Телефон" />
+					<input type="email" id="email" placeholder="Почта" />
+				</div>
+			</div>
+			<div class="form__right">
+				<div class="form__file">
+					<input type="file" id="imageUploads" accept=".png, .jpg, .jpeg" />
+					<label for="image_uploads"><span>Здесь ты&nbsp;можешь загрузить своё фото в&nbsp;формате <span
+								class="form__under">JPEG</span>, <span class="form__under">PNG</span> для&nbsp;бэйджика
+							в&nbsp;качестве участника или&nbsp;зрителя.</span></label>
+				</div>
+				<div class="form__file">
+					<input type="file" id="videoUploads" accept=".mp4, .pdf" multiple />
+					<label for="video_uploads"><span>Здесь ты&nbsp;можешь загрузить свою <span
+								class="form__under">видео-визитку</span> в&nbsp;формате <span
+								class="form__under">MP<span class="form__numb">4</span></span> и&nbsp;файл
+							с&nbsp;портфолио в&nbsp;формате&nbsp;<span class="form__under">PDF</span>.</span></label>
+				</div>
+			</div>
+		</div>
+		<div class="agree-wrapper">
+			<input type="checkbox" id="agree" />
+			<label for="agree">Согласие на обработку данных</label>
+		</div>
+		<button class="form__button" id="formButton">Отправить</button>
+	</section>
+
+	<section class="footer">
+		<div class="footer__anim">
+			<img src="./imgs/footer-anim.gif" alt="" />
+		</div>
+		<div class="footer__title-wrapper" id="contact">
+			<div class="footer__title">
+				СВЯЗЬ С НАМИ
+			</div>
+			<a class="footer__up" href="#header">
+				вверх
+			</a>
+		</div>
+		<div class="footer__email-wrapper">
+			<div class="footer__email-dsc">
+				Почта
+			</div>
+			<a class="footer__email" href="mailto:sguareroot@yandex.ru" target="_blank">
+				sguareroot@yandex.ru
+			</a>
+		</div>
+		<div class="footer__contacts">
+			<div class="footer__tel-wrapper">
+				<div class="footer__tel-dsc">
+					Телефон
+				</div>
+				<a class="footer__tel" href="tel:+79222233203">
+					+79222233203
+				</a>
+			</div>
+			<div class="footer__tg-wrapper">
+				<div class="footer__tg-dsc">
+					Телеграм
+				</div>
+				<a class="footer__tg" href="https://t.me/squareroot" target="_blank">
+					https://t.me/<br />squareroot
+				</a>
+			</div>
+			<div class="footer__address-wrapper">
+				<div class="footer__address-dsc">
+					Адрес
+				</div>
+				<a class="footer__address">
+					Екатеринбург ул. Горького <span>4</span>А
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<script>
+		function getCoords(elem) {
+			let box = elem.getBoundingClientRect();
+
+			return {
+				centerElem: (box.top + box.bottom) / 2 + window.pageYOffset,
+				centerPage: window.pageYOffset + document.documentElement.clientHeight / 2,
+				height: elem.offsetHeight,
+			};
+		}
+		window.addEventListener('scroll', function () {
+			const aboutItems = document.querySelectorAll('.about__item');
+
+			aboutItems.forEach(aboutItem => {
+				let coordsAboutItem = getCoords(aboutItem);
+				if (coordsAboutItem.centerElem - coordsAboutItem.centerPage < coordsAboutItem.height / 2 && coordsAboutItem
+					.centerElem - coordsAboutItem.centerPage > -coordsAboutItem.height / 2) {
+					aboutItem.classList.add('_customer-active');
+				} else {
+					aboutItem.classList.remove('_customer-active');
+				}
+			});
+		});
+		window.addEventListener('scroll', function () {
+			const stepsItems = document.querySelectorAll('.steps__ol>li');
+
+			stepsItems.forEach(stepsItem => {
+				let coordsStepsItem = getCoords(stepsItem);
+				if (coordsStepsItem.centerElem - coordsStepsItem.centerPage < coordsStepsItem.height / 2 && coordsStepsItem
+					.centerElem - coordsStepsItem.centerPage > -coordsStepsItem.height / 2) {
+						stepsItem.classList.add('_customer-active');
+				} else {
+					stepsItem.classList.remove('_customer-active');
+				}
+			});
+		});
+	</script>
+</body>
+
+</html>

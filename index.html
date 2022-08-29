@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
 	<title>Главная</title>
 	<link rel="stylesheet" href="./styles.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
@@ -146,7 +147,8 @@
 				</div>
 				<ul class="steps__ul">
 					<li>Выдача тем командам</li>
-					<li>На разработку дизайн-концепции и&nbsp;её&nbsp;презентацию даётся <span class="step__numb">2</span> дня</li>
+					<li>На разработку дизайн-концепции и&nbsp;её&nbsp;презентацию даётся <span
+							class="step__numb">2</span> дня</li>
 				</ul>
 			</li>
 			<li>
@@ -179,47 +181,51 @@
 		<div class="form__title">
 			Регистрация
 		</div>
-		<div class="form__wrapper">
-			<div class="form__left">
-				<div>
-					<input type="text" id="surname" placeholder="Фамилия" />
-					<input type="text" id="name" placeholder="Имя" />
-					<input type="text" id="patr" placeholder="Отчество" />
-					<input type="text" id="dateBirth"
-						onfocus="(this.type='date'); (this.style.fontFamily='IBM Plex Mono, sans-serif')"
-						onblur="(this.type='text')" placeholder="Дата рождения" />
+		<form id="form" action="./form.php" method="post">
+			<div class="form__wrapper">
+				<div class="form__left">
+					<div>
+						<input type="text" id="surname" placeholder="Фамилия" required />
+						<input type="text" id="name" placeholder="Имя" required />
+						<input type="text" id="patr" placeholder="Отчество" required />
+						<input type="text" id="dateBirth"
+							onfocus="(this.type='date'); (this.style.fontFamily='IBM Plex Mono, sans-serif')"
+							onblur="(this.type='text')" placeholder="Дата рождения" required />
+					</div>
+					<div>
+						<input type="text" id="city" placeholder="Город" required />
+						<input type="text" id="univer" placeholder="ВУЗ" required />
+						<input type="text" id="prof" placeholder="Профессия" required />
+					</div>
+					<div>
+						<input type="tel" id="tel" placeholder="Телефон" required />
+						<input type="email" id="email" placeholder="Почта" required />
+					</div>
 				</div>
-				<div>
-					<input type="text" id="city" placeholder="Город" />
-					<input type="text" id="univer" placeholder="ВУЗ" />
-					<input type="text" id="prof" placeholder="Профессия" />
-				</div>
-				<div>
-					<input type="tel" id="tel" placeholder="Телефон" />
-					<input type="email" id="email" placeholder="Почта" />
+				<div class="form__right">
+					<div class="form__file">
+						<input type="file" id="imageUploads" accept=".png, .jpg, .jpeg" />
+						<label for="imageUploads"><span>Здесь ты&nbsp;можешь загрузить своё фото в&nbsp;формате <span
+									class="form__under">JPEG</span>, <span class="form__under">PNG</span>
+								для&nbsp;бэйджика
+								в&nbsp;качестве участника или&nbsp;зрителя.</span></label>
+					</div>
+					<div class="form__file">
+						<input type="file" id="videoUploads" accept=".mp4, .pdf" multiple />
+						<label for="videoUploads"><span>Здесь ты&nbsp;можешь загрузить свою <span
+									class="form__under">видео-визитку</span> в&nbsp;формате <span
+									class="form__under">MP<span class="form__numb">4</span></span> и&nbsp;файл
+								с&nbsp;портфолио в&nbsp;формате&nbsp;<span
+									class="form__under">PDF</span>.</span></label>
+					</div>
 				</div>
 			</div>
-			<div class="form__right">
-				<div class="form__file">
-					<input type="file" id="imageUploads" accept=".png, .jpg, .jpeg" />
-					<label for="image_uploads"><span>Здесь ты&nbsp;можешь загрузить своё фото в&nbsp;формате <span
-								class="form__under">JPEG</span>, <span class="form__under">PNG</span> для&nbsp;бэйджика
-							в&nbsp;качестве участника или&nbsp;зрителя.</span></label>
-				</div>
-				<div class="form__file">
-					<input type="file" id="videoUploads" accept=".mp4, .pdf" multiple />
-					<label for="video_uploads"><span>Здесь ты&nbsp;можешь загрузить свою <span
-								class="form__under">видео-визитку</span> в&nbsp;формате <span
-								class="form__under">MP<span class="form__numb">4</span></span> и&nbsp;файл
-							с&nbsp;портфолио в&nbsp;формате&nbsp;<span class="form__under">PDF</span>.</span></label>
-				</div>
+			<div class="agree-wrapper">
+				<input type="checkbox" id="agree" required />
+				<label for="agree">Согласие на обработку данных</label>
 			</div>
-		</div>
-		<div class="agree-wrapper">
-			<input type="checkbox" id="agree" />
-			<label for="agree">Согласие на обработку данных</label>
-		</div>
-		<button class="form__button" id="formButton">Отправить</button>
+			<button class="form__button" id="formButton" type="submit">Отправить</button>
+		</form>
 	</section>
 
 	<section class="footer">
@@ -284,7 +290,8 @@
 			const aboutItems = document.querySelectorAll('.about__item');
 			aboutItems.forEach(aboutItem => {
 				let coordsAboutItem = getCoords(aboutItem);
-				if (coordsAboutItem.centerElem - coordsAboutItem.centerPage < coordsAboutItem.height / 2 && coordsAboutItem
+				if (coordsAboutItem.centerElem - coordsAboutItem.centerPage < coordsAboutItem.height / 2 &&
+					coordsAboutItem
 					.centerElem - coordsAboutItem.centerPage > -coordsAboutItem.height / 2) {
 					aboutItem.classList.add('_customer-active');
 				} else {
@@ -296,15 +303,16 @@
 			const stepsItems = document.querySelectorAll('.steps__ol>li');
 			stepsItems.forEach(stepsItem => {
 				let coordsStepsItem = getCoords(stepsItem);
-				if (coordsStepsItem.centerElem - coordsStepsItem.centerPage < coordsStepsItem.height / 2 && coordsStepsItem
+				if (coordsStepsItem.centerElem - coordsStepsItem.centerPage < coordsStepsItem.height / 2 &&
+					coordsStepsItem
 					.centerElem - coordsStepsItem.centerPage > -coordsStepsItem.height / 2) {
-						stepsItem.classList.add('_customer-active');
+					stepsItem.classList.add('_customer-active');
 				} else {
 					stepsItem.classList.remove('_customer-active');
 				}
 			});
 		});
-		window.addEventListener('load', ()=> {
+		window.addEventListener('load', () => {
 			const preload = document.querySelector('._customer-preload');
 			preload.style.display = 'none';
 		})

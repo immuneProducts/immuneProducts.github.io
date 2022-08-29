@@ -281,7 +281,6 @@
 		}
 		window.addEventListener('scroll', function () {
 			const aboutItems = document.querySelectorAll('.about__item');
-
 			aboutItems.forEach(aboutItem => {
 				let coordsAboutItem = getCoords(aboutItem);
 				if (coordsAboutItem.centerElem - coordsAboutItem.centerPage < coordsAboutItem.height / 2 && coordsAboutItem
@@ -294,7 +293,6 @@
 		});
 		window.addEventListener('scroll', function () {
 			const stepsItems = document.querySelectorAll('.steps__ol>li');
-
 			stepsItems.forEach(stepsItem => {
 				let coordsStepsItem = getCoords(stepsItem);
 				if (coordsStepsItem.centerElem - coordsStepsItem.centerPage < coordsStepsItem.height / 2 && coordsStepsItem

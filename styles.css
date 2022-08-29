@@ -562,6 +562,11 @@ img {
 	text-decoration: underline;
 }
 
+.steps__ul li span.step__numb {
+	text-decoration: none;
+	font-family: 'IBM Plex Mono', sans-serif;
+}
+
 .steps__text {
 	max-width: 575px;
 	margin-left: 18px;

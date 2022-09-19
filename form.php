@@ -75,7 +75,7 @@ if (isset($_POST['surname']) && isset($_POST['name']) && isset($_POST['patr']) &
 
     if ($_FILES) {
         foreach ($_FILES["videoUploads"]["error"] as $key => $error) {
-            if ($error == UPLOAD_ERR_OK && pathinfo($_FILES["videoUploads"]["name"][$key])['extension'] == 'mp4') {
+            if ($error == UPLOAD_ERR_OK) {
                 $tmp_name = $_FILES["videoUploads"]["tmp_name"][$key];
                 $name = $_FILES["videoUploads"]["name"][$key];
                 move_uploaded_file($tmp_name, "test/$name");
